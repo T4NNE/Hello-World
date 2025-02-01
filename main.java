@@ -6,14 +6,12 @@ public class Main {
         String ausbildung = "Fachinformatoker für Anwendungsentwicklung";
         String age = "20";
 
-        showGreeting();
+        showGreeting(10);
 
         System.out.println("Ich heiße " + name + ". Ich bewerbe mich als " + ausbildung + " und bin " + age + " Jahre alt.");
     }
 
-    public static void showGreeting() {
-        Integer hour = 20;
-
+    public static void showGreeting(int hour) {
         if (hour < 9) {
             System.out.println("Guten Morgen");
         }
