@@ -1,0 +1,15 @@
+import java.util.Scanner;
+
+public class Rechner {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Bitte gebe einen Betrag in EUR an:");
+        Double money = sc.nextDouble();
+        converttoBaht(money);
+    }
+    public static void converttoBaht(Double eur) {
+        System.out.println("Der Betrag in Baht ist: " + eur * 35.02);
+    }
+
+}
