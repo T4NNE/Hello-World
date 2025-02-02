@@ -27,6 +27,7 @@ public class Game {
             } else if(number > mynumber) {
                 System.out.println("Deine Zahl ist hoch");
             }
+            nextround();
         }
     }
 }
