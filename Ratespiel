@@ -35,9 +35,13 @@ public class Game {
         button.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                String textFromTextField = textField.getText();
-                Integer number = Integer.parseInt(textFromTextField);
-                guess(number);
+                try {
+                    String textFromTextField = textField.getText();
+                    Integer number = Integer.parseInt(textFromTextField);
+                    guess(number);
+                } catch (Exception error) {
+                    text.setText("Bitte gebe eine Zahl ein!");
+                }
             }
         });
 
