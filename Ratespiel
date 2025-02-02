@@ -1,0 +1,32 @@
+import java.util.concurrent.ThreadLocalRandom;
+
+import java.util.Scanner;
+
+public class Game {
+
+    static int mynumber = ThreadLocalRandom.current().nextInt(0, 100 + 1);;
+
+    public static void main(String[]args) {
+        nextround();
+    }
+
+    public static void nextround() {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Rate meine Zahl");
+        Integer number = sc.nextInt();
+        guess(number);
+    }
+    public static void guess(int number) {
+        if(number == mynumber) {
+            System.out.println("Richtig geraten");
+        } else {
+            System.out.println("Falsch geraten");
+
+            if(number < mynumber) {
+                System.out.println("Deine zahl ist zu niedrig");
+            } else if(number > mynumber) {
+                System.out.println("Deine Zahl ist hoch");
+            }
+        }
+    }
+}
